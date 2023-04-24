@@ -25,4 +25,7 @@ urlpatterns = [
     path('forms/Company', views.createCompany),
     path('forms/Drivers', views.createDrivers),
     path('forms/Status', views.createStatus),
+    path('company/', views.viewCompany),
+    path('cars/', views.viewCars),
+    path('drivers/', views.viewDrivers),
 ]

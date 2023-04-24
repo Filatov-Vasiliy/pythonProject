@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="button" value="Компании" onClick='location.href="http://127.0.0.1:8000/company/"'>
+    <input type="button" value="Машины" onClick='location.href="http://127.0.0.1:8000/cars/"'>
+    <input type="button" value="Водители" onClick='location.href="http://127.0.0.1:8000/drivers/"'>
+</form>
+ <form>
+     {% for line in DB %}
+    <p>
+        <tr class='success'>
+            <td>{{ line.id }}</td>
+            <td>{{ line.name }}</td>
+            <td>{{ line.type_car }}</td>
+            <td>{{ line.color }}</td>
+            <td>{{ line.power }}</td>
+            <td>{{ line.company }}</td>
+        </tr>
+    </p>
+ </form>
+{% endfor %}
+</body>
+</html>

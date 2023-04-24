@@ -62,3 +62,18 @@ def createDrivers(request):
     else:
         driversform = DriversForm()
         return render(request, "createDrivers.html", {"form": driversform})
+
+
+def viewCompany(request):
+    companies = Company.objects.all()
+    return render(request, "viewCompany.html", {"DB": companies})
+
+
+def viewCars(request):
+    cars = Cars.objects.all()
+    return render(request, "viewCars.html", {"DB": cars})
+
+
+def viewDrivers(request):
+    drivers = Drivers.objects.all()
+    return render(request, "viewDrivers.html", {"DB": drivers})

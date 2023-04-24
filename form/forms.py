@@ -15,7 +15,6 @@ class StatusForm(forms.Form):
 
 
 class DriversForm(forms.Form):
-    print(StatusDrivers.objects.values_list('id', 'name'))
     name = forms.CharField()
     number = forms.IntegerField()
     email = forms.EmailField()
